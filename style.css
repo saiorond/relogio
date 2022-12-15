@@ -68,6 +68,18 @@ body {
     --rotation: 330deg;    
 }
 
+.clock::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background-color: black;
+    transform: translate(-50%, -50%);
+}
+
 .clock .hand {
     --rotation: 0;
 
@@ -82,4 +94,10 @@ body {
     transform-origin: bottom;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 40%;
+    background-color: red;
 }
