@@ -18,3 +18,7 @@ const setClock = () => {
     setRotation(hoursHand, hoursPercentage);
 
 }
+
+setClock();
+
+setInterval(setClock, 1000);
