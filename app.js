@@ -10,13 +10,12 @@ const setClock = () => {
     const currentDate = new Date();
 
     const secondsPercentage = currentDate.getSeconds() / 60;
-    const minutesPercentage = currentDate.getminutes() / 60;
-    const hoursPercentage = currentDate.gethours() / 60;
+    const minutesPercentage = (secondsPercentage + currentDate.getMinutes()) / 60;
+    const hoursPercentage = (minutesPercentage + currentDate.getHours()) / 60;
 
     setRotation(secondsHand, secondsPercentage);
     setRotation(minutesHand, minutesPercentage);
     setRotation(hoursHand, hoursPercentage);
-
 }
 
 setClock();
